@@ -1,0 +1,56 @@
+import { Link } from 'react-router-dom'
+import { useSiteContent } from '../hooks/useSiteContent'
+
+export function Footer() {
+  const { emailComposeUrl, footerDescription, footerEyebrow, navItems, siteName, whatsappUrl } =
+    useSiteContent()
+
+  return (
+    <footer className="footer">
+      <div className="glass-card footer-shell">
+        <div className="footer-grid">
+          <div className="footer-copy">
+            <span className="eyebrow">{footerEyebrow}</span>
+            <h2>{siteName}</h2>
+            <p>{footerDescription}</p>
+            <div className="footer-format-row">
+              <span className="footer-format-chip">PDF</span>
+              <span className="footer-format-chip">DOCX</span>
+              <span className="footer-format-chip">PPTX</span>
+              <span className="footer-format-chip">JPG</span>
+              <span className="footer-format-chip">PNG</span>
+            </div>
+          </div>
+
+          <div className="footer-links footer-links-block">
+            <span className="footer-label">Navigation</span>
+            {navItems.map((item) => (
+              <Link key={item.path} to={item.path}>
+                {item.label}
+              </Link>
+            ))}
+          </div>
+
+          <div className="footer-links footer-links-block">
+            <span className="footer-label">Entry Points</span>
+            <a href={whatsappUrl} rel="noopener noreferrer" target="_blank">
+              Open WhatsApp
+            </a>
+            <a href={emailComposeUrl}>Draft Email</a>
+            <span className="footer-note">
+              Cashfree is used as the payment handoff before a print request enters the queue.
+            </span>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <span>{new Date().getFullYear()} {siteName}</span>
+          <span>
+            Built for clear onboarding, transparent workflow explanation, and clean entry to the
+            system.
+          </span>
+        </div>
+      </div>
+    </footer>
+  )
+}
