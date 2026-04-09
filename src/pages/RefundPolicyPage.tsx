@@ -68,7 +68,10 @@ export function RefundPolicyPage() {
           className="rounded-3xl border border-cyan-400/20 p-8 shadow-[0_0_80px_rgba(6,182,212,0.08)] backdrop-blur"
           style={{ background: 'var(--surface)' }}
         >
-          <p className="mb-3 inline-flex rounded-full border border-cyan-400/40 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">
+          <p
+            className="mb-3 inline-flex rounded-full border border-cyan-400/40 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em]"
+            style={{ color: 'var(--secondary)' }}
+          >
             Legal
           </p>
           <h1 className="text-3xl font-bold tracking-tight sm:text-5xl" style={{ color: 'var(--text)' }}>
@@ -81,7 +84,7 @@ export function RefundPolicyPage() {
           <div className="mt-6 flex flex-wrap gap-3 text-sm">
             <Link
               to="/terms-and-conditions"
-              className="rounded-xl border px-4 py-2 transition hover:border-cyan-400/60 hover:text-cyan-200"
+              className="rounded-xl border px-4 py-2 transition hover:border-cyan-400/60"
               style={{ borderColor: 'var(--border-strong)', background: 'var(--surface-strong)', color: 'var(--text)' }}
             >
               View Terms and Conditions
@@ -125,7 +128,7 @@ export function RefundPolicyPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 sm:text-base" style={{ color: 'var(--text-soft)' }}>
             To request a refund review, email{' '}
-            <a href="mailto:autoprintingg@gmail.com" className="font-medium text-cyan-300 hover:text-cyan-200">
+            <a href="mailto:autoprintingg@gmail.com" className="font-medium" style={{ color: 'var(--secondary)' }}>
               autoprintingg@gmail.com
             </a>{' '}
             with your order details and payment reference.

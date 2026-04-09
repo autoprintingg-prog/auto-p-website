@@ -84,7 +84,10 @@ export function TermsAndConditionsPage() {
           className="rounded-3xl border border-emerald-400/20 p-8 shadow-[0_0_80px_rgba(16,185,129,0.08)] backdrop-blur"
           style={{ background: 'var(--surface)' }}
         >
-          <p className="mb-3 inline-flex rounded-full border border-emerald-400/40 bg-emerald-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-emerald-300">
+          <p
+            className="mb-3 inline-flex rounded-full border border-emerald-400/40 bg-emerald-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em]"
+            style={{ color: 'var(--primary)' }}
+          >
             Legal
           </p>
           <h1 className="text-3xl font-bold tracking-tight sm:text-5xl" style={{ color: 'var(--text)' }}>
@@ -97,7 +100,7 @@ export function TermsAndConditionsPage() {
           <div className="mt-6 flex flex-wrap gap-3 text-sm">
             <Link
               to="/refund-policy"
-              className="rounded-xl border px-4 py-2 transition hover:border-emerald-400/60 hover:text-emerald-200"
+              className="rounded-xl border px-4 py-2 transition hover:border-emerald-400/60"
               style={{ borderColor: 'var(--border-strong)', background: 'var(--surface-strong)', color: 'var(--text)' }}
             >
               View Refund Policy
@@ -141,7 +144,7 @@ export function TermsAndConditionsPage() {
           </h2>
           <p className="mt-3 text-sm leading-7 sm:text-base" style={{ color: 'var(--text-soft)' }}>
             For legal or policy questions, contact us at{' '}
-            <a href="mailto:autoprintingg@gmail.com" className="font-medium text-emerald-300 hover:text-emerald-200">
+            <a href="mailto:autoprintingg@gmail.com" className="font-medium" style={{ color: 'var(--primary)' }}>
               autoprintingg@gmail.com
             </a>
             .
