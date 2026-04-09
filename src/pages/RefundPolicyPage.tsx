@@ -59,26 +59,30 @@ const sections = [
 
 export function RefundPolicyPage() {
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100">
+    <div className="min-h-screen" style={{ background: 'var(--bg)', color: 'var(--text)' }}>
       <main className="mx-auto w-full max-w-5xl px-4 pb-20 pt-28 sm:px-6 lg:px-8">
         <motion.section
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.45, ease: 'easeOut' }}
-          className="rounded-3xl border border-cyan-400/20 bg-slate-900/60 p-8 shadow-[0_0_80px_rgba(6,182,212,0.08)] backdrop-blur"
+          className="rounded-3xl border border-cyan-400/20 p-8 shadow-[0_0_80px_rgba(6,182,212,0.08)] backdrop-blur"
+          style={{ background: 'var(--surface)' }}
         >
           <p className="mb-3 inline-flex rounded-full border border-cyan-400/40 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">
             Legal
           </p>
-          <h1 className="text-3xl font-bold tracking-tight text-white sm:text-5xl">Refund Policy</h1>
-          <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-300 sm:text-base">
+          <h1 className="text-3xl font-bold tracking-tight sm:text-5xl" style={{ color: 'var(--text)' }}>
+            Refund Policy
+          </h1>
+          <p className="mt-4 max-w-3xl text-sm leading-7 sm:text-base" style={{ color: 'var(--text-soft)' }}>
             This policy explains when a refund can be issued for AutoPrinting orders and when it cannot be
             provided.
           </p>
           <div className="mt-6 flex flex-wrap gap-3 text-sm">
             <Link
               to="/terms-and-conditions"
-              className="rounded-xl border border-slate-700 bg-slate-800 px-4 py-2 text-slate-100 transition hover:border-cyan-400/60 hover:text-cyan-200"
+              className="rounded-xl border px-4 py-2 transition hover:border-cyan-400/60 hover:text-cyan-200"
+              style={{ borderColor: 'var(--border-strong)', background: 'var(--surface-strong)', color: 'var(--text)' }}
             >
               View Terms and Conditions
             </Link>
@@ -94,10 +98,13 @@ export function RefundPolicyPage() {
           {sections.map((section) => (
             <article
               key={section.title}
-              className="rounded-2xl border border-slate-800 bg-slate-900/70 p-6 transition hover:border-cyan-400/30"
+              className="rounded-2xl border p-6 transition hover:border-cyan-400/30"
+              style={{ borderColor: 'var(--border)', background: 'var(--surface)' }}
             >
-              <h2 className="text-xl font-semibold text-white">{section.title}</h2>
-              <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-300 sm:text-base">
+              <h2 className="text-xl font-semibold" style={{ color: 'var(--text)' }}>
+                {section.title}
+              </h2>
+              <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 sm:text-base" style={{ color: 'var(--text-soft)' }}>
                 {section.body.map((point) => (
                   <li key={point}>{point}</li>
                 ))}
@@ -110,17 +117,22 @@ export function RefundPolicyPage() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55, delay: 0.14, ease: 'easeOut' }}
-          className="mt-8 rounded-2xl border border-slate-800 bg-slate-900/70 p-6"
+          className="mt-8 rounded-2xl border p-6"
+          style={{ borderColor: 'var(--border)', background: 'var(--surface)' }}
         >
-          <h2 className="text-xl font-semibold text-white">8. Contact for Refund Support</h2>
-          <p className="mt-3 text-sm leading-7 text-slate-300 sm:text-base">
+          <h2 className="text-xl font-semibold" style={{ color: 'var(--text)' }}>
+            8. Contact for Refund Support
+          </h2>
+          <p className="mt-3 text-sm leading-7 sm:text-base" style={{ color: 'var(--text-soft)' }}>
             To request a refund review, email{' '}
             <a href="mailto:autoprintingg@gmail.com" className="font-medium text-cyan-300 hover:text-cyan-200">
               autoprintingg@gmail.com
             </a>{' '}
             with your order details and payment reference.
           </p>
-          <p className="mt-6 text-xs uppercase tracking-[0.2em] text-slate-400">Last updated: April 2026</p>
+          <p className="mt-6 text-xs uppercase tracking-[0.2em]" style={{ color: 'var(--text-muted)' }}>
+            Last updated: April 2026
+          </p>
         </motion.section>
       </main>
     </div>
