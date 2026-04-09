@@ -36,10 +36,9 @@ export function Footer() {
             <a href={whatsappUrl} rel="noopener noreferrer" target="_blank">
               Open WhatsApp
             </a>
-            <a href={emailComposeUrl}>Draft Email</a>
-            <span className="footer-note">
-              Cashfree is used as the payment handoff before a print request enters the queue.
-            </span>
+            <a href={emailComposeUrl}>autoprintingg@gmail.com</a>
+            <a href="tel:+918767535697">+91 87675 35697</a>
+            <a href="tel:+918010076459">+91 80100 76459</a>
           </div>
         </div>
 

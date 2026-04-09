@@ -128,7 +128,7 @@ export const defaultSiteContent: SiteContent = {
   footerDescription:
     'Product website and entry layer for a WhatsApp-based document printing workflow built around faster intake, clearer pricing, and cleaner queue handoff.',
   whatsappUrl: DEFAULT_WHATSAPP_URL,
-  emailComposeUrl: 'mailto:?subject=AutoPrint%20Inquiry',
+  emailComposeUrl: 'mailto:autoprintingg@gmail.com?subject=AutoPrint%20Inquiry',
   homeHero: {
     eyebrow: 'WhatsApp-Based Print Automation',
     title: 'Send a document. Get it printed.',
@@ -363,14 +363,14 @@ export const defaultSiteContent: SiteContent = {
         'Open a prefilled WhatsApp message to start the print request conversation from the same channel the product is built around.',
     },
     {
-      title: 'Email Draft',
+      title: 'Email Us',
       description:
-        'Open your default mail app with an AutoPrint inquiry subject so product questions, walkthrough requests, or deployment discussions can be sent through your preferred contact.',
+        'Reach us at autoprintingg@gmail.com for product questions, walkthrough requests, or deployment discussions.',
     },
     {
-      title: 'Working Hours',
+      title: 'Call Us',
       description:
-        'Requests can be initiated anytime in WhatsApp. Physical print completion follows the operating schedule of the connected print desk.',
+        'Speak directly with our team — +91 87675 35697 or +91 80100 76459. Available during working hours.',
     },
   ],
 }

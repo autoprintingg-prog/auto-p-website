@@ -60,7 +60,7 @@ export function ContactPage() {
     )
     const body = encodeURIComponent(buildDraftBody(form))
 
-    return `mailto:?subject=${subject}&body=${body}`
+    return `mailto:autoprintingg@gmail.com?subject=${subject}&body=${body}`
   }, [form])
 
   const whatsappHref = useMemo(() => {
