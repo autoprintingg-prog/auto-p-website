@@ -8,12 +8,11 @@ import { useSiteContent } from '../hooks/useSiteContent'
 const initialAuthForm = {
   email: '',
   password: '',
-  confirmPassword: '',
 }
 
 export function AdminLoginPage() {
   const { siteName } = useSiteContent()
-  const { login, setupAccount, status } = useAdminAuth()
+  const { login } = useAdminAuth()
   const [authForm, setAuthForm] = useState(initialAuthForm)
   const [authNotice, setAuthNotice] = useState(
     'This admin access is stored in your browser for this project workspace.',
@@ -21,24 +20,6 @@ export function AdminLoginPage() {
 
   const handleAuthSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-
-    if (status === 'setup') {
-      if (authForm.password !== authForm.confirmPassword) {
-        setAuthNotice('Passwords do not match.')
-        return
-      }
-
-      const result = await setupAccount(authForm.email, authForm.password)
-      setAuthNotice(
-        result.message ?? (result.success ? 'Admin account created.' : 'Unable to create account.'),
-      )
-
-      if (result.success) {
-        setAuthForm(initialAuthForm)
-      }
-
-      return
-    }
 
     const result = await login(authForm.email, authForm.password)
     setAuthNotice(result.message ?? (result.success ? 'Signed in.' : 'Unable to sign in.'))
@@ -52,8 +33,8 @@ export function AdminLoginPage() {
     <div className="admin-login-view">
       <Reveal>
         <Card className="admin-auth-card">
-          <span className="eyebrow">{status === 'setup' ? 'Create Admin Access' : 'Admin Login'}</span>
-          <h1>{status === 'setup' ? `Create the ${siteName} admin account.` : `Sign in to manage ${siteName}.`}</h1>
+          <span className="eyebrow">Admin Login</span>
+          <h1>Sign in to manage {siteName}.</h1>
           <p className="lead">
             This login route is separate from the public website. Once you sign in, the dashboard opens
             at `/admin` and the public UI stays clean.
@@ -84,25 +65,11 @@ export function AdminLoginPage() {
                   value={authForm.password}
                 />
               </label>
-
-              {status === 'setup' ? (
-                <label className="field field-full">
-                  <span>Confirm password</span>
-                  <input
-                    onChange={(event) =>
-                      setAuthForm((current) => ({ ...current, confirmPassword: event.target.value }))
-                    }
-                    placeholder="Re-enter the password"
-                    type="password"
-                    value={authForm.confirmPassword}
-                  />
-                </label>
-              ) : null}
             </div>
 
             <div className="form-actions">
               <Button size="lg" type="submit">
-                {status === 'setup' ? 'Create Admin Account' : 'Sign In'}
+                Sign In
               </Button>
               <Button size="lg" to="/" variant="secondary">
                 Return to Website

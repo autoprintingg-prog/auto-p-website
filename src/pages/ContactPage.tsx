@@ -1,9 +1,10 @@
-import { type FormEvent, useMemo, useState } from 'react'
+import { type FormEvent, useState } from 'react'
 import { Button } from '../components/Button'
 import { Card } from '../components/Card'
 import { Reveal } from '../components/Reveal'
 import { SectionHeading } from '../components/SectionHeading'
 import { useSiteContent } from '../hooks/useSiteContent'
+import { submitContactSubmission } from '../lib/contact-submissions'
 
 const contactSignals = [
   {
@@ -34,49 +35,37 @@ const initialState: ContactFormState = {
   message: '',
 }
 
-function buildDraftBody(values: ContactFormState) {
-  return [
-    'AutoPrint inquiry',
-    '',
-    `Name: ${values.name || 'Not provided'}`,
-    `Email: ${values.email || 'Not provided'}`,
-    `Institution: ${values.institution || 'Not provided'}`,
-    '',
-    'Message:',
-    values.message || 'No message entered.',
-  ].join('\n')
-}
-
 export function ContactPage() {
   const { contactCards, contactIntro, emailComposeUrl, whatsappUrl } = useSiteContent()
   const [form, setForm] = useState(initialState)
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const [notice, setNotice] = useState(
-    'The contact form drafts your message in your email or WhatsApp app so it stays useful even without a website backend.',
+    'Submit your inquiry and we will review it from our internal dashboard.',
   )
 
-  const mailtoHref = useMemo(() => {
-    const subject = encodeURIComponent(
-      form.name ? `AutoPrint inquiry from ${form.name}` : 'AutoPrint inquiry',
-    )
-    const body = encodeURIComponent(buildDraftBody(form))
-
-    return `mailto:autoprintingg@gmail.com?subject=${subject}&body=${body}`
-  }, [form])
-
-  const whatsappHref = useMemo(() => {
-    try {
-      const nextUrl = new URL(whatsappUrl)
-      nextUrl.searchParams.set('text', buildDraftBody(form))
-      return nextUrl.toString()
-    } catch {
-      return whatsappUrl
-    }
-  }, [form, whatsappUrl])
-
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    window.location.href = mailtoHref
-    setNotice('Email draft opened in your default mail client.')
+
+    if (isSubmitting) {
+      return
+    }
+
+    if (!form.name.trim() || !form.email.trim() || !form.message.trim()) {
+      setNotice('Name, email, and message are required.')
+      return
+    }
+
+    setIsSubmitting(true)
+
+    try {
+      await submitContactSubmission(form)
+      setForm(initialState)
+      setNotice('Inquiry submitted successfully.')
+    } catch {
+      setNotice('Unable to submit now. Please try again in a moment.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -153,8 +142,8 @@ export function ContactPage() {
             <div>
               <SectionHeading
                 eyebrow="Inquiry Form"
-                title="Draft your message with real actions behind the buttons"
-                description="This is a UI-based contact form. Instead of pretending to submit to a backend, it prepares a ready-to-send draft for email or WhatsApp."
+                title="Send your message securely"
+                description="This form sends your inquiry directly to our backend database."
               />
 
               <Card className="contact-side-card">
@@ -223,17 +212,17 @@ export function ContactPage() {
                 </div>
 
                 <div className="form-actions">
-                  <Button size="lg" type="submit">
-                    Draft Inquiry Email
+                  <Button disabled={isSubmitting} size="lg" type="submit">
+                    {isSubmitting ? 'Submitting...' : 'Send Inquiry'}
                   </Button>
                   <Button
                     className="secondary-action"
-                    href={whatsappHref}
+                    href={whatsappUrl}
                     size="lg"
                     variant="secondary"
                     external
                   >
-                    Send via WhatsApp
+                    Open WhatsApp
                   </Button>
                 </div>
 

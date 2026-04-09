@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 type ButtonProps = {
   children: ReactNode
   className?: string
+  disabled?: boolean
   external?: boolean
   href?: string
   onClick?: MouseEventHandler<HTMLButtonElement>
@@ -16,6 +17,7 @@ type ButtonProps = {
 export function Button({
   children,
   className,
+  disabled = false,
   external = false,
   href,
   onClick,
@@ -50,7 +52,7 @@ export function Button({
   }
 
   return (
-    <button className={classes} onClick={onClick} type={type}>
+    <button className={classes} disabled={disabled} onClick={onClick} type={type}>
       <span className="button-content">{children}</span>
     </button>
   )
