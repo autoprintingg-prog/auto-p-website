@@ -13,6 +13,8 @@ import { HomePage } from './pages/HomePage'
 import { HowItWorksPage } from './pages/HowItWorksPage'
 import { NotFoundPage } from './pages/NotFoundPage'
 import { PricingPage } from './pages/PricingPage'
+import { RefundPolicyPage } from './pages/RefundPolicyPage'
+import { TermsAndConditionsPage } from './pages/TermsAndConditionsPage'
 
 function App() {
   const location = useLocation()
@@ -61,6 +63,22 @@ function App() {
             element={
               <PageTransition>
                 <ContactPage />
+              </PageTransition>
+            }
+          />
+          <Route
+            path="/terms-and-conditions"
+            element={
+              <PageTransition>
+                <TermsAndConditionsPage />
+              </PageTransition>
+            }
+          />
+          <Route
+            path="/refund-policy"
+            element={
+              <PageTransition>
+                <RefundPolicyPage />
               </PageTransition>
             }
           />

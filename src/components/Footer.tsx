@@ -29,6 +29,8 @@ export function Footer() {
                 {item.label}
               </Link>
             ))}
+            <Link to="/terms-and-conditions">Terms and Conditions</Link>
+            <Link to="/refund-policy">Refund Policy</Link>
           </div>
 
           <div className="footer-links footer-links-block">
