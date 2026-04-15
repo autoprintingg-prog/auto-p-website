@@ -95,12 +95,23 @@ export function HomePage() {
               ))}
             </div>
 
-            <div className="format-chip-row">
-              {supportedFormats.map((format) => (
-                <span key={format.name} className="format-chip">
-                  {format.name}
-                </span>
-              ))}
+            <div className="stats-row">
+              <div className="stat-item">
+                <span className="stat-value">5+</span>
+                <span className="stat-label">File Formats</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-value">&lt;60s</span>
+                <span className="stat-label">To Queue</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-value">100%</span>
+                <span className="stat-label">Digital Flow</span>
+              </div>
+              <div className="stat-item">
+                <span className="stat-value">0</span>
+                <span className="stat-label">App Downloads</span>
+              </div>
             </div>
           </Reveal>
 
@@ -127,8 +138,10 @@ export function HomePage() {
                   <span className="step-number">0{index + 1}</span>
                   <item.icon size={20} />
                 </div>
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
+                <div className="step-card-body">
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
+                </div>
               </Card>
             </Reveal>
           ))}
@@ -151,8 +164,10 @@ export function HomePage() {
                 <div className="feature-icon">
                   <feature.icon size={18} />
                 </div>
-                <h3>{feature.title}</h3>
-                <p>{feature.description}</p>
+                <div className="feature-card-body">
+                  <h3>{feature.title}</h3>
+                  <p>{feature.description}</p>
+                </div>
               </Card>
             </Reveal>
           ))}
