@@ -33,11 +33,13 @@ export function Navbar() {
     >
       <div className={['navbar', isScrolled ? 'is-scrolled' : ''].join(' ')}>
         <NavLink className="brand" onClick={() => setIsMenuOpen(false)} to="/">
-          <img
-            src="/logo.png"
-            alt={siteName}
-            className="brand-logo"
-          />
+          <span className="brand-logo-wrap">
+            <img
+              src="/Logo.jpeg"
+              alt={siteName}
+              className="brand-logo"
+            />
+          </span>
           <span className="brand-copy">
             <strong>{siteName}</strong>
             <span>{siteTagline}</span>
