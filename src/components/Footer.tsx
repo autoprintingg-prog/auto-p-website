@@ -11,7 +11,7 @@ export function Footer() {
         <div className="footer-grid">
           <div className="footer-copy">
             <span className="eyebrow">{footerEyebrow}</span>
-            <img src="/Logo.jpeg" alt={siteName} className="footer-logo" />
+            <img src="/logo.png" alt={siteName} className="footer-logo" />
             <h2>{siteName}</h2>
             <p>{footerDescription}</p>
             <div className="footer-format-row">
