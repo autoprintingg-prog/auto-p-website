@@ -36,7 +36,7 @@ const heroMobileFlow = [
 ]
 
 export function HomePage() {
-  const { featureList, homeHero, supportedFormats, useCases, whatsappUrl, workflowPreview } =
+  const { featureList, homeHero, useCases, whatsappUrl, workflowPreview } =
     useSiteContent()
 
   return (
