@@ -116,11 +116,11 @@ const featureIcons = [Smartphone, Layers3, SlidersHorizontal, ShieldCheck, Workf
 const formatIcons = [FileText, FileType2, Palette, FileImage, ScanSearch]
 const contactIcons = [MessageSquareText, Mail, Clock3]
 const LEGACY_WHATSAPP_URL =
-  'https://api.whatsapp.com/send?text=Hello%20AutoPrint%2C%20I%20want%20to%20start%20a%20print%20request.'
+  'https://api.whatsapp.com/send?text=Hello%20AutoPrinting%2C%20I%20want%20to%20start%20a%20print%20request.'
 export const DEFAULT_WHATSAPP_URL = 'https://wa.me/918263962485?text=Hi'
 
 export const defaultSiteContent: SiteContent = {
-  siteName: 'AutoPrint',
+  siteName: 'AutoPrinting',
   siteTagline: 'WhatsApp printing automation',
   navMetaLabel: 'Automation Layer',
   navCtaLabel: 'Start on WhatsApp',
@@ -128,12 +128,12 @@ export const defaultSiteContent: SiteContent = {
   footerDescription:
     'Product website and entry layer for a WhatsApp-based document printing workflow built around faster intake, clearer pricing, and cleaner queue handoff.',
   whatsappUrl: DEFAULT_WHATSAPP_URL,
-  emailComposeUrl: 'mailto:autoprintingg@gmail.com?subject=AutoPrint%20Inquiry',
+  emailComposeUrl: 'mailto:autoprintingg@gmail.com?subject=AutoPrinting%20Inquiry',
   homeHero: {
     eyebrow: 'WhatsApp-Based Print Automation',
     title: 'Send a document. Get it printed.',
     lead:
-      'AutoPrint turns WhatsApp into a print intake workflow. Send a file, choose the print settings, pay through Cashfree, and move straight into the queue.',
+      'AutoPrinting turns WhatsApp into a print intake workflow. Send a file, choose the print settings, pay through Cashfree, and move straight into the queue.',
     primaryCtaLabel: 'Start on WhatsApp',
     secondaryCtaLabel: 'See the flow',
   },
@@ -141,23 +141,23 @@ export const defaultSiteContent: SiteContent = {
     eyebrow: 'Workflow Breakdown',
     title: 'From WhatsApp message to printed output',
     lead:
-      'AutoPrint separates the user-facing conversation from the backend automation. This site explains the exact journey so users know what happens before, during, and after payment.',
+      'AutoPrinting separates the user-facing conversation from the backend automation. This site explains the exact journey so users know what happens before, during, and after payment.',
   },
   pricingIntro: {
     eyebrow: 'Pricing',
     title: 'Transparent billing logic for real print deployments',
     lead:
-      'AutoPrint does not publish invented rates. Instead, the website explains the formula clearly so the connected print center can use its real per-page charges without misleading users.',
+      'AutoPrinting does not publish invented rates. Instead, the website explains the formula clearly so the connected print center can use its real per-page charges without misleading users.',
   },
   aboutIntro: {
-    eyebrow: 'About AutoPrint',
+    eyebrow: 'About AutoPrinting',
     title: 'A print workflow product built around faster document intake',
     lead:
-      'AutoPrint is designed as a practical workflow product for document printing. This website explains the experience clearly, shows how the system fits into real usage, and gives users a direct entry point through WhatsApp.',
+      'AutoPrinting is designed as a practical workflow product for document printing. This website explains the experience clearly, shows how the system fits into real usage, and gives users a direct entry point through WhatsApp.',
   },
   contactIntro: {
     eyebrow: 'Contact',
-    title: 'Reach the AutoPrint team through the channels that fit the workflow',
+    title: 'Reach the AutoPrinting team through the channels that fit the workflow',
     lead:
       'WhatsApp is the fastest path into the product. For workflow discussions, walkthroughs, or implementation inquiries, you can also draft an email directly from this page.',
   },
@@ -171,7 +171,7 @@ export const defaultSiteContent: SiteContent = {
   workflowPreview: [
     {
       title: 'Send',
-      description: 'Start in WhatsApp by sending a supported file directly to the AutoPrint flow.',
+      description: 'Start in WhatsApp by sending a supported file directly to the AutoPrinting flow.',
     },
     {
       title: 'Choose',
@@ -194,7 +194,7 @@ export const defaultSiteContent: SiteContent = {
     },
     {
       title: 'Multiple Formats',
-      description: 'AutoPrint handles PDF, DOCX, PPTX, JPG, and PNG uploads in one flow.',
+      description: 'AutoPrinting handles PDF, DOCX, PPTX, JPG, and PNG uploads in one flow.',
     },
     {
       title: 'Flexible Options',
@@ -237,7 +237,7 @@ export const defaultSiteContent: SiteContent = {
     {
       title: 'Upload the file in WhatsApp',
       description:
-        'The user opens the AutoPrint WhatsApp entry point and sends a document or image to begin.',
+        'The user opens the AutoPrinting WhatsApp entry point and sends a document or image to begin.',
     },
     {
       title: 'Validate format and page readiness',
@@ -321,7 +321,7 @@ export const defaultSiteContent: SiteContent = {
     {
       question: 'Why are rates entered instead of hardcoded on this website?',
       answer:
-        'AutoPrint is designed to work with the pricing configured by the connected print center. The calculator stays transparent without inventing rates that may not match the actual deployment.',
+        'AutoPrinting is designed to work with the pricing configured by the connected print center. The calculator stays transparent without inventing rates that may not match the actual deployment.',
     },
     {
       question: 'How is the total calculated?',
@@ -354,7 +354,7 @@ export const defaultSiteContent: SiteContent = {
   projectGuideSummary: {
     title: 'Product Foundations',
     description:
-      'AutoPrint is presented as a product-first workflow while the underlying system has been shaped through structured engineering review. The public website focuses on clarity, adoption, and trust, while the automation layer handles validation, payment safety, and print queue readiness separately.',
+      'AutoPrinting is presented as a product-first workflow while the underlying system has been shaped through structured engineering review. The public website focuses on clarity, adoption, and trust, while the automation layer handles validation, payment safety, and print queue readiness separately.',
   },
   contactCards: [
     {
