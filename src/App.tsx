@@ -1,12 +1,8 @@
 import { AnimatePresence } from 'framer-motion'
-import { Navigate, Route, Routes, useLocation } from 'react-router-dom'
-import { AdminLayout } from './components/AdminLayout'
+import { Route, Routes, useLocation } from 'react-router-dom'
 import { Layout } from './components/Layout'
 import { PageTransition } from './components/PageTransition'
 import { ScrollToTop } from './hooks/ScrollToTop'
-import { useAdminAuth } from './hooks/useAdminAuth'
-import { AdminDashboardPage } from './pages/AdminDashboardPage'
-import { AdminLoginPage } from './pages/AdminLoginPage'
 import { AboutPage } from './pages/AboutPage'
 import { ContactPage } from './pages/ContactPage'
 import { HomePage } from './pages/HomePage'
@@ -18,11 +14,9 @@ import { TermsAndConditionsPage } from './pages/TermsAndConditionsPage'
 
 function App() {
   const location = useLocation()
-  const isAdminRoute = location.pathname.startsWith('/admin')
-  const { status } = useAdminAuth()
 
-  const content = (
-    <>
+  return (
+    <Layout>
       <ScrollToTop />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
@@ -83,26 +77,6 @@ function App() {
             }
           />
           <Route
-            path="/admin"
-            element={
-              <PageTransition>
-                {status === 'authenticated' ? (
-                  <AdminDashboardPage />
-                ) : (
-                  <Navigate replace to="/admin/login" />
-                )}
-              </PageTransition>
-            }
-          />
-          <Route
-            path="/admin/login"
-            element={
-              <PageTransition>
-                {status === 'authenticated' ? <Navigate replace to="/admin" /> : <AdminLoginPage />}
-              </PageTransition>
-            }
-          />
-          <Route
             path="*"
             element={
               <PageTransition>
@@ -112,10 +86,8 @@ function App() {
           />
         </Routes>
       </AnimatePresence>
-    </>
+    </Layout>
   )
-
-  return isAdminRoute ? <AdminLayout>{content}</AdminLayout> : <Layout>{content}</Layout>
 }
 
 export default App
