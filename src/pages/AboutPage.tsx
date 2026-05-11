@@ -86,7 +86,29 @@ export function AboutPage() {
             <Reveal key={member.name} delay={index * 0.06}>
               <Card className="team-card team-name-card">
                 <span className="team-index">0{index + 1}</span>
+                <div className="team-avatar-wrap">
+                  <img
+                    alt={member.name}
+                    className="team-avatar"
+                    src={member.photo}
+                  />
+                </div>
                 <h3>{member.name}</h3>
+                <div className="team-contact-list">
+                  <a className="team-contact-item" href={`mailto:${member.email}`}>
+                    <svg fill="none" height="14" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg">
+                      <rect height="16" rx="2" ry="2" width="20" x="2" y="4" />
+                      <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                    </svg>
+                    {member.email}
+                  </a>
+                  <a className="team-contact-item" href={`tel:${member.mobile.replace(/\s/g, '')}`}>
+                    <svg fill="none" height="14" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" width="14" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.59 1.16h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.65A16 16 0 0 0 15.35 16.1l.96-.96a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                    </svg>
+                    {member.mobile}
+                  </a>
+                </div>
               </Card>
             </Reveal>
           ))}
