@@ -410,12 +410,10 @@ svg {
   inset: -140% auto -140% -12%;
   width: 52%;
   transform: translateX(-240%) skewX(-22deg);
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0),
-    rgba(255, 255, 255, 0.36),
-    rgba(255, 255, 255, 0)
-  );
+  background: linear-gradient(90deg,
+      rgba(255, 255, 255, 0),
+      rgba(255, 255, 255, 0.36),
+      rgba(255, 255, 255, 0));
   opacity: 0.85;
   pointer-events: none;
   transition: transform 0.9s cubic-bezier(0.19, 1, 0.22, 1);
@@ -544,7 +542,7 @@ svg {
   opacity: 1;
 }
 
-.glass-card > * {
+.glass-card>* {
   position: relative;
   z-index: 1;
 }
@@ -783,14 +781,19 @@ svg {
     linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
   background-size: 28px 28px;
-  mask-image: radial-gradient(ellipse at 50% 30%, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+  mask-image: radial-gradient(ellipse at 50% 30%, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
   pointer-events: none;
   animation: gridFade 6s ease-in-out infinite alternate;
 }
 
 @keyframes gridFade {
-  0% { opacity: 0.8; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 .hero-orb {
@@ -1062,9 +1065,9 @@ svg {
   font-size: 0.98rem;
 }
 
-.mockup-header > div,
-.mockup-doc > div,
-.result-card > div,
+.mockup-header>div,
+.mockup-doc>div,
+.result-card>div,
 .page-hero-card-item,
 .hero-node-copy {
   min-width: 0;
@@ -1273,7 +1276,7 @@ svg {
   animation: markerPulse 3.2s ease-in-out infinite;
 }
 
-.timeline-marker > * {
+.timeline-marker>* {
   position: relative;
   z-index: 1;
 }
@@ -1291,12 +1294,10 @@ svg {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(34, 197, 94, 0),
-    rgba(34, 197, 94, 0.92),
-    rgba(139, 92, 246, 0)
-  );
+  background: linear-gradient(180deg,
+      rgba(34, 197, 94, 0),
+      rgba(34, 197, 94, 0.92),
+      rgba(139, 92, 246, 0));
   background-size: 100% 180%;
   animation: timelineFlow 2.9s ease-in-out infinite;
 }
@@ -1515,31 +1516,6 @@ svg {
   margin: 0;
 }
 
-.team-avatar-wrap {
-  width: 96px;
-  height: 96px;
-  border-radius: 50%;
-  padding: 3px;
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
-  flex-shrink: 0;
-  box-shadow: 0 0 0 1px rgba(34, 212, 106, 0.2), 0 8px 24px rgba(34, 212, 106, 0.18);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.team-avatar-wrap:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 0 2px rgba(34, 212, 106, 0.4), 0 12px 32px rgba(34, 212, 106, 0.28);
-}
-
-.team-avatar {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  object-fit: cover;
-  object-position: center top;
-  display: block;
-}
-
 .team-contact-list {
   display: flex;
   flex-direction: column;
@@ -1567,6 +1543,31 @@ svg {
   flex-shrink: 0;
   color: var(--primary);
   opacity: 0.8;
+}
+
+.team-avatar-wrap {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  flex-shrink: 0;
+  box-shadow: 0 0 0 1px rgba(34, 212, 106, 0.2), 0 8px 32px rgba(34, 212, 106, 0.22);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-avatar-wrap:hover {
+  transform: scale(1.04);
+  box-shadow: 0 0 0 3px rgba(34, 212, 106, 0.45), 0 16px 40px rgba(34, 212, 106, 0.3);
+}
+
+.team-avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
 }
 
 .team-index {
@@ -1803,7 +1804,7 @@ svg {
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.12) 0%, transparent 60%);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, transparent 60%);
 }
 
 .brand-mark-core {
@@ -2657,11 +2658,13 @@ svg {
 }
 
 @keyframes markerPulse {
+
   0%,
   100% {
     transform: scale(0.9);
     opacity: 0.32;
   }
+
   50% {
     transform: scale(1.08);
     opacity: 0.62;
@@ -2672,6 +2675,7 @@ svg {
   0% {
     background-position: 0% 0%;
   }
+
   100% {
     background-position: 0% 100%;
   }
@@ -2681,17 +2685,20 @@ svg {
   0% {
     background-position: 0% 0%;
   }
+
   100% {
     background-position: 100% 0%;
   }
 }
 
 @keyframes metaSpark {
+
   0%,
   100% {
     transform: rotate(0deg) scale(1);
     opacity: 0.85;
   }
+
   50% {
     transform: rotate(8deg) scale(1.08);
     opacity: 1;
@@ -2699,23 +2706,47 @@ svg {
 }
 
 @keyframes orbDrift {
-  0% { transform: translate(0, 0) scale(1); }
-  100% { transform: translate(40px, 30px) scale(1.12); }
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  100% {
+    transform: translate(40px, 30px) scale(1.12);
+  }
 }
 
 @keyframes pulseGlow {
-  0%, 100% { box-shadow: 0 0 14px rgba(34, 212, 106, 0.5), 0 0 30px rgba(34, 212, 106, 0.2); }
-  50% { box-shadow: 0 0 20px rgba(34, 212, 106, 0.7), 0 0 44px rgba(34, 212, 106, 0.3); }
+
+  0%,
+  100% {
+    box-shadow: 0 0 14px rgba(34, 212, 106, 0.5), 0 0 30px rgba(34, 212, 106, 0.2);
+  }
+
+  50% {
+    box-shadow: 0 0 20px rgba(34, 212, 106, 0.7), 0 0 44px rgba(34, 212, 106, 0.3);
+  }
 }
 
 @keyframes floatBounce {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
 }
 
 @keyframes shimmerSlide {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
 }
 
 .gradient-text {
@@ -2745,6 +2776,7 @@ svg {
 }
 
 @media (max-width: 1080px) {
+
   .step-grid,
   .feature-grid,
   .pricing-preview-grid,
@@ -2816,6 +2848,7 @@ svg {
 }
 
 @media (max-width: 920px) {
+
   .nav-links,
   .nav-cta,
   .nav-meta {
@@ -2848,9 +2881,8 @@ svg {
     padding: 20px;
     border: 1px solid rgba(34, 212, 106, 0.12);
     background: linear-gradient(160deg,
-      rgba(12, 12, 20, 0.97) 0%,
-      rgba(15, 15, 28, 0.95) 100%
-    );
+        rgba(12, 12, 20, 0.97) 0%,
+        rgba(15, 15, 28, 0.95) 100%);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(34, 212, 106, 0.08);
   }
 
@@ -2898,6 +2930,7 @@ svg {
 }
 
 @media (max-width: 640px) {
+
   .page-shell,
   .footer {
     width: min(100% - 20px, 1180px);
@@ -3286,6 +3319,7 @@ svg {
 }
 
 @media (max-width: 720px) {
+
   .page-shell,
   .footer {
     width: min(100% - 18px, 1180px);
@@ -3398,12 +3432,10 @@ svg {
   }
 
   .timeline-line::after {
-    background: linear-gradient(
-      90deg,
-      rgba(34, 212, 106, 0),
-      rgba(34, 212, 106, 0.92),
-      rgba(157, 110, 240, 0)
-    );
+    background: linear-gradient(90deg,
+        rgba(34, 212, 106, 0),
+        rgba(34, 212, 106, 0.92),
+        rgba(157, 110, 240, 0));
     background-size: 180% 100%;
     animation: timelineFlowHorizontal 2.9s ease-in-out infinite;
   }
@@ -4079,19 +4111,27 @@ svg {
 }
 
 /* Section dividers */
-.section + .section {
+.section+.section {
   border-top: 1px solid rgba(255, 255, 255, 0.04);
 }
 
-:root[data-theme='light'] .section + .section {
+:root[data-theme='light'] .section+.section {
   border-top: 1px solid rgba(10, 10, 40, 0.06);
 }
 
 /* Connector animation */
 @keyframes connectorFlow {
-  0% { opacity: 0.4; }
-  50% { opacity: 0.8; }
-  100% { opacity: 0.4; }
+  0% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0.4;
+  }
 }
 
 .hero-connector {
@@ -4173,4 +4213,3 @@ svg {
 .page-transition {
   will-change: opacity, transform;
 }
-
