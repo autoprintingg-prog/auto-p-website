@@ -354,8 +354,8 @@ export const defaultSiteContent: SiteContent = {
     'Print Queue Automation',
   ],
   teamMembers: [
-    { name: 'Vinayak Gund', email: 'gundvinayak1@gmail.com', mobile: '+91 87675 35697', photo: '/team/vinayak.jpg' },
     { name: 'Prajwal Abhang', email: 'prajwalabhang25@gmail.com', mobile: '+91 80100 76459', photo: '/team/prajwal.jpg' },
+    { name: 'Vinayak Gund', email: 'gundvinayak1@gmail.com', mobile: '+91 87675 35697', photo: '/team/vinayak.jpg' },
     { name: 'Shubham Sonawane', email: 'shubhamsonawane8081@gmail.com', mobile: '+91 80104 11281', photo: '/team/shubham.png' },
   ],
   projectGuideSummary: {
