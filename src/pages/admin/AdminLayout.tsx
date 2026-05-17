@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { ExternalLink, LayoutDashboard, LogOut, Sparkles } from 'lucide-react'
+import { ExternalLink, LayoutDashboard, LogOut } from 'lucide-react'
 import { NavLink, Outlet, useNavigate } from 'react-router-dom'
 import { useAdminAuth } from '../../context/AdminAuthContext'
 
