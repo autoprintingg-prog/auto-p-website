@@ -7,28 +7,32 @@ const flowNodes = [
     description: 'Supported files accepted in the request flow.',
     icon: FileText,
     className: 'hero-node top-left',
-    delay: 0,
+    delay: 0.1,
+    floatDelay: 0,
   },
   {
     title: 'Options selected',
     description: 'Color mode, duplex, and copies are confirmed.',
     icon: SlidersHorizontal,
     className: 'hero-node top-right',
-    delay: 0.18,
+    delay: 0.22,
+    floatDelay: 1.2,
   },
   {
     title: 'Cashfree handoff',
     description: 'Payment is verified before queue submission.',
     icon: CreditCard,
     className: 'hero-node bottom-left',
-    delay: 0.36,
+    delay: 0.34,
+    floatDelay: 2.4,
   },
   {
     title: 'Print queue ready',
     description: 'The automation passes the job to the print pipeline.',
     icon: Printer,
     className: 'hero-node bottom-right',
-    delay: 0.54,
+    delay: 0.46,
+    floatDelay: 3.6,
   },
 ]
 
@@ -37,40 +41,25 @@ const statusItems = ['PDF · DOCX · PPTX · JPG · PNG', 'No app download neede
 export function HeroVisual() {
   return (
     <motion.div
-      animate={{ opacity: 1, y: 0 }}
       className="glass-card hero-visual-shell"
-      initial={{ opacity: 0, y: 32 }}
-      transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+      initial={{ opacity: 0, y: 28 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: [0.25, 0.46, 0.45, 0.94], delay: 0.15 }}
     >
       <div className="hero-grid-pattern" aria-hidden="true"></div>
-      <motion.div
-        animate={{
-          scale: [1, 1.18, 1],
-          opacity: [0.22, 0.42, 0.22],
-          x: [0, 10, 0],
-        }}
-        className="hero-orb hero-orb-one"
-        transition={{ duration: 7, ease: 'easeInOut', repeat: Number.POSITIVE_INFINITY }}
-      />
-      <motion.div
-        animate={{
-          scale: [1.04, 1, 1.12, 1.04],
-          opacity: [0.2, 0.32, 0.22, 0.2],
-          x: [0, -12, 0],
-        }}
-        className="hero-orb hero-orb-two"
-        transition={{ duration: 8.5, ease: 'easeInOut', repeat: Number.POSITIVE_INFINITY }}
-      />
+
+      {/* Ambient orbs — pure CSS animation, no framer-motion conflict */}
+      <div className="hero-orb hero-orb-one" aria-hidden="true" />
+      <div className="hero-orb hero-orb-two" aria-hidden="true" />
 
       <div className="hero-visual-stage">
+        {/* Central core panel */}
         <motion.div
-          animate={{ y: [0, -8, 0], boxShadow: [
-            'var(--shadow-md), 0 0 60px rgba(34, 212, 106, 0.08)',
-            'var(--shadow-md), 0 0 80px rgba(34, 212, 106, 0.18)',
-            'var(--shadow-md), 0 0 60px rgba(34, 212, 106, 0.08)',
-          ]}}
           className="hero-core-panel"
-          transition={{ duration: 5, ease: 'easeInOut', repeat: Number.POSITIVE_INFINITY }}
+          animate={{
+            y: [0, -7, 0],
+          }}
+          transition={{ duration: 5, ease: 'easeInOut', repeat: Number.POSITIVE_INFINITY, delay: 0.5 }}
         >
           <span className="hero-core-badge">
             <Sparkles size={15} />
@@ -95,8 +84,9 @@ export function HeroVisual() {
               background: 'rgba(255,255,255,0.08)', overflow: 'hidden',
             }}>
               <motion.div
+                initial={{ width: '0%' }}
                 animate={{ width: ['0%', '100%'] }}
-                transition={{ duration: 3, ease: 'linear', repeat: Number.POSITIVE_INFINITY, repeatDelay: 1 }}
+                transition={{ duration: 2.8, ease: 'easeInOut', repeat: Number.POSITIVE_INFINITY, repeatDelay: 0.8, delay: 0.6 }}
                 style={{
                   height: '100%', borderRadius: '99px',
                   background: 'linear-gradient(90deg, var(--primary), var(--secondary))',
@@ -113,22 +103,26 @@ export function HeroVisual() {
           <span className="hero-connector connector-bottom-right"></span>
         </div>
 
+        {/* Flow nodes — enter once, then float continuously */}
         {flowNodes.map((node) => (
           <motion.div
             key={node.title}
-            animate={{ y: [0, -10, 0] }}
             className={node.className}
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, scale: 0.88 }}
+            animate={{
+              opacity: 1,
+              scale: 1,
+              y: [0, -9, 0],
+            }}
             transition={{
+              opacity: { duration: 0.5, delay: node.delay },
+              scale: { duration: 0.5, delay: node.delay, ease: [0.34, 1.56, 0.64, 1] },
               y: {
-                duration: 5,
-                delay: node.delay,
+                duration: 4.8,
+                delay: node.floatDelay,
                 ease: 'easeInOut',
                 repeat: Number.POSITIVE_INFINITY,
               },
-              opacity: { duration: 0.6, delay: node.delay * 0.5 },
-              scale: { duration: 0.6, delay: node.delay * 0.5, type: 'spring', stiffness: 200 },
             }}
           >
             <div className="hero-node-icon">
@@ -142,9 +136,10 @@ export function HeroVisual() {
         ))}
       </div>
 
+      {/* Status panel */}
       <motion.div
-        animate={{ backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'] }}
         className="hero-status-panel"
+        animate={{ backgroundPosition: ['0% 50%', '100% 50%', '0% 50%'] }}
         transition={{ duration: 12, ease: 'linear', repeat: Number.POSITIVE_INFINITY }}
       >
         <div className="hero-status-top">
@@ -165,7 +160,7 @@ export function HeroVisual() {
               className="hero-status-chip"
               initial={{ opacity: 0, x: -8 }}
               animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.8 + i * 0.12 }}
+              transition={{ duration: 0.45, delay: 0.7 + i * 0.1 }}
             >
               {item}
             </motion.span>
