@@ -1,3 +1,4 @@
+import { Mail } from 'lucide-react'
 import { Button } from '../components/Button'
 import { Card } from '../components/Card'
 import { Reveal } from '../components/Reveal'
@@ -8,12 +9,12 @@ const principles = [
   {
     title: 'Problem',
     description:
-      'Traditional print counters often require repetitive manual coordination for file sharing, print options, payment, and queue handoff.',
+      'Traditional print counters require manual coordination for file sharing, settings, payment, and queue handoff — every single time.',
   },
   {
     title: 'Solution',
     description:
-      'AutoPrint brings those decisions into one guided WhatsApp flow so the user experience stays simple while the automation handles the operational steps separately.',
+      'AutoPrinting automates the entire flow. Customers send a document via WhatsApp or email autoprintingg@gmail.com, and the system handles everything: validation, pricing, payment, and print queue.',
   },
 ]
 
@@ -44,7 +45,7 @@ export function AboutPage() {
             <Reveal key={item.title} delay={index * 0.08}>
               <Card className="info-card large-card">
                 <span className="plan-label">{item.title}</span>
-                <h3>{item.title === 'Problem' ? 'Manual print coordination slows users down' : 'One guided flow creates a cleaner experience'}</h3>
+                <h3>{item.title === 'Problem' ? 'Manual print coordination wastes time' : 'Fully automated — WhatsApp or Email'}</h3>
                 <p>{item.description}</p>
               </Card>
             </Reveal>
@@ -56,8 +57,8 @@ export function AboutPage() {
         <Reveal>
           <SectionHeading
             eyebrow="Tech Stack"
-            title="Website and system capabilities presented together"
-            description="The site uses a modern frontend stack, while the product story reflects the real workflow components involved in messaging, payment, and print automation."
+            title="Built with production-grade infrastructure"
+            description="AutoPrinting is built on a full SaaS stack: React frontend, Node.js backend, PostgreSQL database, Redis queuing, WhatsApp automation, Gmail API for email intake, and Cashfree for payments."
           />
         </Reveal>
 
@@ -131,7 +132,15 @@ export function AboutPage() {
               <Button external href={whatsappUrl} size="lg">
                 Start on WhatsApp
               </Button>
-              <Button size="lg" to="/contact" variant="secondary">
+              <Button
+                size="lg"
+                href="mailto:autoprintingg@gmail.com?subject=Print%20Request&body=Hi%2C%20I%20would%20like%20to%20print%20a%20document.%20Please%20find%20the%20attachment."
+                variant="secondary"
+              >
+                <Mail size={16} />
+                Email a Document
+              </Button>
+              <Button size="lg" to="/contact" variant="ghost">
                 Contact the team
               </Button>
             </div>

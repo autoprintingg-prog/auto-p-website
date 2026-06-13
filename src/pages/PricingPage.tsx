@@ -1,3 +1,4 @@
+import { Mail } from 'lucide-react'
 import { Button } from '../components/Button'
 import { Card } from '../components/Card'
 import { FAQAccordion } from '../components/FAQAccordion'
@@ -9,22 +10,26 @@ import { useSiteContent } from '../hooks/useSiteContent'
 const pricingSignals = [
   {
     label: 'Rate source',
-    value: 'Configured by print desk',
+    value: 'Set by print desk',
   },
   {
     label: 'Formula',
-    value: 'Pages x rate x copies',
+    value: 'Pages × rate × copies',
   },
   {
-    label: 'Queue trigger',
-    value: 'After payment confirmation',
+    label: 'Payment gate',
+    value: 'Cashfree — before queue',
+  },
+  {
+    label: 'Order channels',
+    value: 'WhatsApp + Email',
   },
 ]
 
 const pricingNotes = [
-  'No fake rates are shown on the website.',
-  'Users still get a clear pricing formula before payment.',
-  'B&W and Color use the same transparent billing logic.',
+  'No invented rates — formula explained transparently.',
+  'Customers see the exact total before paying.',
+  'Works on WhatsApp orders and Email orders.',
 ]
 
 export function PricingPage() {
@@ -152,16 +157,24 @@ export function PricingPage() {
         <Reveal>
           <div className="glass-card cta-banner">
             <div>
-              <span className="eyebrow">Start the request</span>
-              <h2>Use the same formula in the real flow after sending the file in WhatsApp.</h2>
+              <span className="eyebrow">Start your print request</span>
+              <h2>Send a document now — via WhatsApp or Email.</h2>
               <p>
-                Once the document is submitted and the preferences are chosen, AutoPrint can move the
-                request toward Cashfree payment and queueing.
+                Order prints by sending a WhatsApp message or emailing your document to
+                autoprintingg@gmail.com. Both channels are automated end-to-end.
               </p>
             </div>
             <div className="cta-actions">
               <Button external href={whatsappUrl} size="lg">
-                Start Printing on WhatsApp
+                Start on WhatsApp
+              </Button>
+              <Button
+                size="lg"
+                href="mailto:autoprintingg@gmail.com?subject=Print%20Request&body=Hi%2C%20I%20would%20like%20to%20print%20a%20document.%20Please%20find%20the%20attachment."
+                variant="secondary"
+              >
+                <Mail size={16} />
+                Email a Document
               </Button>
             </div>
           </div>

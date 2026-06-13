@@ -124,45 +124,45 @@ export const DEFAULT_WHATSAPP_URL = 'https://wa.me/918263962485?text=Hi'
 
 export const defaultSiteContent: SiteContent = {
   siteName: 'AutoPrinting',
-  siteTagline: 'WhatsApp printing automation',
-  navMetaLabel: 'Automation Layer',
+  siteTagline: 'WhatsApp · Email · Print automation',
+  navMetaLabel: 'Dual Channel',
   navCtaLabel: 'Start on WhatsApp',
-  footerEyebrow: 'WhatsApp Print Workflow',
+  footerEyebrow: 'WhatsApp + Email Print Automation',
   footerDescription:
-    'Product website and entry layer for a WhatsApp-based document printing workflow built around faster intake, clearer pricing, and cleaner queue handoff.',
+    'AutoPrinting is a fully automated print workflow platform. Customers send documents via WhatsApp or email autoprintingg@gmail.com — the system handles validation, pricing, payment via Cashfree, and queues the job for printing automatically.',
   whatsappUrl: DEFAULT_WHATSAPP_URL,
-  emailComposeUrl: 'mailto:autoprintingg@gmail.com?subject=AutoPrinting%20Inquiry',
+  emailComposeUrl: 'mailto:autoprintingg@gmail.com?subject=Print%20Request&body=Hi%2C%20I%20would%20like%20to%20print%20a%20document.%20Please%20find%20the%20attachment.',
   homeHero: {
-    eyebrow: 'WhatsApp-Based Print Automation',
+    eyebrow: 'WhatsApp · Email · Print Automation',
     title: 'Send a document. Get it printed.',
     lead:
-      'AutoPrinting turns WhatsApp into a print intake workflow. Send a file, choose the print settings, pay through Cashfree, and move straight into the queue.',
+      'AutoPrinting turns WhatsApp or Email into a fully automated print intake workflow. Send a file, choose your settings, pay through Cashfree, and your document moves straight into the print queue.',
     primaryCtaLabel: 'Start on WhatsApp',
     secondaryCtaLabel: 'See the flow',
   },
   howItWorksIntro: {
     eyebrow: 'Workflow Breakdown',
-    title: 'From WhatsApp message to printed output',
+    title: 'From WhatsApp or Email to printed output — fully automated',
     lead:
-      'AutoPrinting separates the user-facing conversation from the backend automation. This site explains the exact journey so users know what happens before, during, and after payment.',
+      'AutoPrinting supports two intake channels: WhatsApp for instant conversational ordering and Email (autoprintingg@gmail.com) for document-first workflows. Both lead to the same payment gate and print queue.',
   },
   pricingIntro: {
     eyebrow: 'Pricing',
-    title: 'Transparent billing logic for real print deployments',
+    title: 'Transparent billing logic for every print job',
     lead:
-      'AutoPrinting does not publish invented rates. Instead, the website explains the formula clearly so the connected print center can use its real per-page charges without misleading users.',
+      'AutoPrinting does not publish invented rates. The pricing formula is explained clearly so the connected print center can use its real per-page charges. Customers always see the exact total before paying via Cashfree.',
   },
   aboutIntro: {
     eyebrow: 'About AutoPrinting',
-    title: 'A print workflow product built around faster document intake',
+    title: 'A dual-channel print automation platform for modern print shops',
     lead:
-      'AutoPrinting is designed as a practical workflow product for document printing. This website explains the experience clearly, shows how the system fits into real usage, and gives users a direct entry point through WhatsApp.',
+      'AutoPrinting is a fully automated printing workflow. Customers send documents via WhatsApp or email autoprintingg@gmail.com — no app, no counter, no phone call needed. The system handles everything from document validation to payment and print queue handoff.',
   },
   contactIntro: {
     eyebrow: 'Contact',
-    title: 'Reach the AutoPrinting team through the channels that fit the workflow',
+    title: 'Reach the AutoPrinting team',
     lead:
-      'WhatsApp is the fastest path into the product. For workflow discussions, walkthroughs, or implementation inquiries, you can also draft an email directly from this page.',
+      'WhatsApp is the fastest path for customers. For onboarding inquiries, product walkthroughs, or deployment discussions, use the form below or email us directly at autoprintingg@gmail.com.',
   },
   navItems: [
     { label: 'Home', path: '/' },
@@ -174,98 +174,98 @@ export const defaultSiteContent: SiteContent = {
   workflowPreview: [
     {
       title: 'Send',
-      description: 'Start in WhatsApp by sending a supported file directly to the AutoPrinting flow.',
+      description: 'Start via WhatsApp or email autoprintingg@gmail.com with your document attached.',
     },
     {
       title: 'Choose',
       description:
-        'Select color mode, duplex preference, and the number of copies before confirmation.',
+        'Select color mode, duplex preference, and number of copies. Email orders show a confirmation page; WhatsApp orders use the chat flow.',
     },
     {
       title: 'Pay',
-      description: 'Complete payment through Cashfree after the system prepares the print summary.',
+      description: 'Complete payment through Cashfree after the system prepares your print summary.',
     },
     {
       title: 'Print',
-      description: 'The file enters the print queue automatically once payment is confirmed.',
+      description: 'Your file enters the print queue automatically once payment is confirmed.',
     },
   ],
   featureList: [
     {
       title: 'No App Required',
-      description: 'The full interaction starts in WhatsApp, keeping onboarding simple and familiar.',
+      description: 'Order prints via WhatsApp chat or by emailing autoprintingg@gmail.com — no app, no signup.',
     },
     {
-      title: 'Multiple Formats',
-      description: 'AutoPrinting handles PDF, DOCX, PPTX, JPG, and PNG uploads in one flow.',
+      title: 'Dual Channel',
+      description: 'Both WhatsApp and Email ordering are supported in one unified automation system.',
     },
     {
       title: 'Flexible Options',
-      description: 'Users choose black and white or color, single-side or duplex, plus copy count.',
+      description: 'Users choose black and white or color, single-side or duplex, plus copy count — on any channel.',
     },
     {
       title: 'Secure Payments',
       description:
-        'Cashfree handles the payment handoff so the print job only proceeds after confirmation.',
+        'Cashfree handles payment before any print job is queued. Money collected first, paper used after.',
     },
     {
       title: 'Automatic Queue',
       description:
-        'Approved jobs move into the processing queue without manual re-entry at the printer desk.',
+        'Approved jobs enter the print queue automatically — no manual re-entry at the printer desk.',
     },
     {
-      title: 'Status Updates',
+      title: 'Smart Notifications',
       description:
-        'The chat flow can keep the user informed as the document moves through validation and print.',
+        'Customers receive WhatsApp messages or emails at every stage: received, paid, printing, and ready.',
     },
   ],
   useCases: [
     {
       title: 'Campus Print Desks',
       description:
-        'Turn student file submissions into a guided print workflow without needing a separate app or manual counter-side configuration for every request.',
+        'Students send files via WhatsApp or email autoprintingg@gmail.com, choose settings, pay online, and pick up their prints — zero counter interaction needed.',
     },
     {
       title: 'Office Document Hubs',
       description:
-        'Let internal teams submit reports, forms, and presentation decks through a familiar channel while preserving payment and queue logic where needed.',
+        'Internal teams email reports and presentation decks directly to the print inbox. Payment and queue handoff happen automatically.',
     },
     {
       title: 'Managed Service Counters',
       description:
-        'Reduce repetitive intake work by collecting file type, print settings, payment handoff, and print readiness before the operator steps in.',
+        'Reduce repetitive intake work. File collection, print settings, payment, and queue readiness all handled before the operator steps in.',
     },
   ],
   timelineSteps: [
     {
-      title: 'Upload the file in WhatsApp',
+      title: 'Send the document',
       description:
-        'The user opens the AutoPrinting WhatsApp entry point and sends a document or image to begin.',
+        'Customer sends a file via WhatsApp or emails it to autoprintingg@gmail.com with the document attached.',
     },
     {
-      title: 'Validate format and page readiness',
+      title: 'System validates the file',
       description:
-        'The automation checks whether the file type is supported and prepares it for the print workflow.',
+        'AutoPrinting checks the file type, counts pages, and converts images or Word/PowerPoint files to print-ready PDF automatically.',
     },
     {
-      title: 'Collect print preferences',
+      title: 'Print preferences collected',
       description:
-        'The user confirms black and white or color, single or duplex, and the required number of copies.',
+        'WhatsApp users respond to guided prompts. Email users open a secure confirmation link to choose color, duplex, and copy count.',
     },
     {
-      title: 'Generate the payable summary',
+      title: 'Price summary generated',
       description:
-        'The system prepares the final print request based on page count, chosen mode, and copy quantity.',
+        'The system calculates the total — pages × rate × copies — and presents it clearly before any payment is requested.',
     },
     {
-      title: 'Redirect to Cashfree',
+      title: 'Payment via Cashfree',
       description:
-        'Payment is completed securely before the print request is allowed into the automation queue.',
+        'A Cashfree payment link is sent to the customer. Print only proceeds after the payment is confirmed.',
     },
     {
-      title: 'Queue and print automatically',
+      title: 'Auto-queued and printed',
       description:
-        'Once payment succeeds, the job moves to the connected print process without extra manual handling.',
+        'Once payment succeeds, the job enters the print queue automatically. The customer gets a confirmation on WhatsApp or email.',
     },
   ],
   supportedFormats: [
@@ -296,62 +296,73 @@ export const defaultSiteContent: SiteContent = {
   pricingComparison: [
     {
       label: 'Billing model',
-      bw: 'Per-page rate configured by the print desk',
-      color: 'Per-page rate configured by the print desk',
+      bw: 'Per-page rate set by the print desk',
+      color: 'Per-page rate set by the print desk',
     },
     {
       label: 'Formula',
-      bw: 'Pages x B&W rate x Copies',
-      color: 'Pages x Color rate x Copies',
+      bw: 'Pages × B&W rate × Copies',
+      color: 'Pages × Color rate × Copies',
     },
     {
       label: 'Duplex support',
-      bw: 'Available when the printer setup allows double-sided jobs',
-      color: 'Available when the printer setup allows double-sided jobs',
+      bw: 'Available when printer setup allows double-sided jobs',
+      color: 'Available when printer setup allows double-sided jobs',
     },
     {
       label: 'Payment gate',
-      bw: 'Cashfree confirmation before queue entry',
-      color: 'Cashfree confirmation before queue entry',
+      bw: 'Cashfree — paid before queue entry',
+      color: 'Cashfree — paid before queue entry',
     },
     {
       label: 'Supported inputs',
       bw: 'PDF, DOCX, PPTX, JPG, PNG',
       color: 'PDF, DOCX, PPTX, JPG, PNG',
     },
+    {
+      label: 'Order channels',
+      bw: 'WhatsApp + Email',
+      color: 'WhatsApp + Email',
+    },
   ],
   pricingFaqs: [
     {
-      question: 'Why are rates entered instead of hardcoded on this website?',
+      question: 'How do I place a print order?',
       answer:
-        'AutoPrinting is designed to work with the pricing configured by the connected print center. The calculator stays transparent without inventing rates that may not match the actual deployment.',
+        'You can send a document via WhatsApp to our business number, or email it directly to autoprintingg@gmail.com. The system picks it up within seconds and guides you through the rest.',
+    },
+    {
+      question: 'Why are per-page rates not shown on the website?',
+      answer:
+        'AutoPrinting is designed to work with rates configured by the connected print center. The calculator stays transparent without publishing numbers that may not match the actual deployment.',
     },
     {
       question: 'How is the total calculated?',
       answer:
-        'The website uses the workflow formula directly: pages multiplied by the selected per-page rate and multiplied by the number of copies.',
-    },
-    {
-      question: 'Does duplex change the calculator formula?',
-      answer:
-        'The display formula stays the same here because the charging policy depends on how the print center defines duplex billing. The site keeps that choice explicit instead of assuming a hidden discount.',
+        'Pages × selected per-page rate × number of copies. For color jobs, the rate is higher. Duplex billing depends on how the print center configures it.',
     },
     {
       question: 'When does payment happen?',
       answer:
-        'Payment happens only after the print request has been configured. Cashfree is used as the secure payment handoff before the system queues the file.',
+        'Payment happens after print preferences are confirmed. A Cashfree payment link is sent via WhatsApp or shown on the email confirmation page. Print only starts after payment is verified.',
+    },
+    {
+      question: 'What file types are supported?',
+      answer:
+        'PDF, DOCX, PPTX, JPG, and PNG. Word and PowerPoint files are converted to PDF automatically. Images are scaled to A4 with proper margins before printing.',
     },
   ],
   techStack: [
-    'React',
-    'TypeScript',
-    'Vite',
-    'React Router',
-    'Framer Motion',
-    'WhatsApp Workflow',
-    'Cashfree Payment Flow',
-    'Document Validation',
-    'Print Queue Automation',
+    'React + TypeScript + Vite',
+    'Node.js + Express',
+    'PostgreSQL + Prisma',
+    'Redis + BullMQ',
+    'WhatsApp (Evolution API)',
+    'Gmail API (OAuth2)',
+    'Cashfree Payments',
+    'PDF + DOCX + PPTX Processing',
+    'Docker + Docker Compose',
+    'JWT Auth + bcrypt',
   ],
   teamMembers: [
     { name: 'Prajwal Abhang', email: 'prajwalabhang25@gmail.com', mobile: '+91 80100 76459', photo: '/team/prajwal.jpg' },
@@ -367,17 +378,17 @@ export const defaultSiteContent: SiteContent = {
     {
       title: 'WhatsApp Entry Point',
       description:
-        'Open a prefilled WhatsApp message to start the print request conversation from the same channel the product is built around.',
+        'Send a WhatsApp message to start your print request instantly. The chatbot guides you through document upload, settings, and payment.',
     },
     {
-      title: 'Email Us',
+      title: 'Email Your Document',
       description:
-        'Reach us at autoprintingg@gmail.com for product questions, walkthrough requests, or deployment discussions.',
+        'Email your file directly to autoprintingg@gmail.com. The system picks it up automatically and emails you a confirmation link to review settings and pay.',
     },
     {
-      title: 'Call Us',
+      title: 'Call or Message Us',
       description:
-        'Speak directly with our team — +91 87675 35697 or +91 80100 76459. Available during working hours.',
+        'Speak directly with our team — +91 87675 35697 or +91 80100 76459. Available during working hours for inquiries and onboarding.',
     },
   ],
 }

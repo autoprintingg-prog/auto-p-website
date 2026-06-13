@@ -8,16 +8,16 @@ import { submitContactSubmission } from '../lib/contact-submissions'
 
 const contactSignals = [
   {
-    label: 'Fastest path',
-    value: 'WhatsApp entry flow',
+    label: 'For customers',
+    value: 'WhatsApp or autoprintingg@gmail.com',
   },
   {
-    label: 'Best for discussions',
-    value: 'Email draft from the form',
+    label: 'For inquiries',
+    value: 'Form below or email us',
   },
   {
-    label: 'Best use case',
-    value: 'Product walkthroughs and deployment context',
+    label: 'Best for',
+    value: 'Onboarding, walkthroughs, deployment',
   },
 ]
 
@@ -81,8 +81,12 @@ export function ContactPage() {
                 <Button external href={whatsappUrl} size="lg">
                   Open WhatsApp
                 </Button>
-                <Button href={emailComposeUrl} size="lg" variant="ghost">
-                  Draft Email
+                <Button
+                  href="mailto:autoprintingg@gmail.com?subject=Print%20Request&body=Hi%2C%20I%20would%20like%20to%20print%20a%20document.%20Please%20find%20the%20attachment."
+                  size="lg"
+                  variant="secondary"
+                >
+                  Email a Document
                 </Button>
               </div>
             </div>
@@ -125,9 +129,9 @@ export function ContactPage() {
                     Open WhatsApp
                   </Button>
                 ) : null}
-                {card.title === 'Email Draft' ? (
-                  <Button href={emailComposeUrl} variant="ghost">
-                    Draft Email
+                {card.title === 'Email Your Document' ? (
+                  <Button href="mailto:autoprintingg@gmail.com?subject=Print%20Request&body=Hi%2C%20I%20would%20like%20to%20print%20a%20document.%20Please%20find%20the%20attachment." variant="ghost">
+                    Email autoprintingg@gmail.com
                   </Button>
                 ) : null}
               </Card>
@@ -142,23 +146,23 @@ export function ContactPage() {
             <div>
               <SectionHeading
                 eyebrow="Inquiry Form"
-                title="Send your message securely"
-                description="This form sends your inquiry directly to our backend database."
+                title="Send us a message"
+                description="Use this form for onboarding questions, product demos, or deployment discussions. We review every inquiry personally."
               />
 
               <Card className="contact-side-card">
                 <h3>Best for</h3>
                 <div className="summary-row">
                   <span className="summary-dot"></span>
-                  <span>Product walkthroughs and workflow explanations</span>
+                  <span>Onboarding your print shop onto AutoPrinting</span>
                 </div>
                 <div className="summary-row">
                   <span className="summary-dot"></span>
-                  <span>Clarifying supported file formats and print options</span>
+                  <span>Product walkthrough and demo requests</span>
                 </div>
                 <div className="summary-row">
                   <span className="summary-dot"></span>
-                  <span>Deployment context and implementation discussion around the system</span>
+                  <span>Deployment and integration discussions</span>
                 </div>
               </Card>
             </div>

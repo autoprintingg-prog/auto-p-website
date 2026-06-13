@@ -2,6 +2,7 @@ import {
   ArrowRight,
   CheckCircle2,
   CreditCard,
+  Mail,
   MessageSquareText,
   Printer,
   ShieldCheck,
@@ -26,6 +27,10 @@ const heroMobileFlow = [
     icon: MessageSquareText,
   },
   {
+    label: 'Email intake',
+    icon: Mail,
+  },
+  {
     label: 'Cashfree payment',
     icon: CreditCard,
   },
@@ -45,8 +50,8 @@ export function HomePage() {
         <div className="hero-grid hero-grid-refined">
           <Reveal className="hero-copy hero-copy-shell glass-card">
             <span className="eyebrow">{homeHero.eyebrow}</span>
-            <h1>{homeHero.title}</h1>
-            <p className="lead">{homeHero.lead}</p>
+            <h1>Send a document.<br />Get it printed.</h1>
+            <p className="lead">AutoPrinting turns <strong>WhatsApp</strong> or <strong>Email</strong> into a print intake workflow. Send a file to <a href="mailto:autoprintingg@gmail.com" className="hero-email-inline">autoprintingg@gmail.com</a>, choose print settings, pay through Cashfree, and move straight into the queue.</p>
 
             <div className="hero-mobile-flow">
               <div className="hero-mobile-flow-top">
@@ -68,10 +73,17 @@ export function HomePage() {
 
             <div className="hero-actions">
               <Button external href={whatsappUrl} size="lg">
+                <MessageSquareText size={17} />
                 {homeHero.primaryCtaLabel}
               </Button>
-              <Button size="lg" to="/how-it-works" variant="ghost">
-                {homeHero.secondaryCtaLabel}
+              <Button
+                size="lg"
+                href="mailto:autoprintingg@gmail.com?subject=Print%20Request&body=Hi%2C%20I%20want%20to%20print%20a%20document.%20Please%20find%20the%20attachment."
+                variant="secondary"
+                className="hero-email-btn"
+              >
+                <Mail size={17} />
+                Email a Document
               </Button>
             </div>
 
@@ -83,6 +95,10 @@ export function HomePage() {
               <div className="hero-strip-card">
                 <ShieldCheck size={18} />
                 <span>Cashfree payment handoff before queue entry</span>
+              </div>
+              <div className="hero-strip-card hero-strip-card--email">
+                <Mail size={18} />
+                <span>autoprintingg@gmail.com</span>
               </div>
             </div>
 
@@ -121,12 +137,12 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section section-tinted">
         <Reveal>
           <SectionHeading
             eyebrow="How It Works"
             title="A product flow that keeps print requests simple"
-            description="The website introduces the user journey clearly, while the automation layer handles validation, payment confirmation, and queue handoff behind the scenes."
+            description="Send via WhatsApp or Email. Choose settings. Pay via Cashfree. Done. Both channels are fully automated."
           />
         </Reveal>
 
@@ -136,7 +152,7 @@ export function HomePage() {
               <Card className="step-card">
                 <div className="step-card-top">
                   <span className="step-number">0{index + 1}</span>
-                  <item.icon size={20} />
+                  <item.icon size={22} style={{ color: 'var(--primary)' }} />
                 </div>
                 <div className="step-card-body">
                   <h3>{item.title}</h3>
@@ -177,7 +193,7 @@ export function HomePage() {
       <section className="section">
         <Reveal>
           <SectionHeading
-            eyebrow="Where It Fits"
+            eyebrow="Use Cases"
             title="Built for real document intake environments"
             description="AutoPrint can be framed as a startup-style workflow product because the problem is practical, repeatable, and relevant anywhere print requests need cleaner intake."
           />
@@ -196,7 +212,7 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section section-tinted">
         <Reveal>
           <SectionHeading
             eyebrow="Pricing Preview"
@@ -209,7 +225,7 @@ export function HomePage() {
           <Reveal>
             <Card className="pricing-card">
               <span className="plan-label">B&W Printing</span>
-              <h3>Pages x B&W rate x Copies</h3>
+              <h3>Pages × B&W rate × Copies</h3>
               <p>
                 Use the calculator on the pricing page with the black and white rate configured by the
                 connected print desk.
@@ -220,7 +236,7 @@ export function HomePage() {
           <Reveal delay={0.08}>
             <Card className="pricing-card">
               <span className="plan-label">Color Printing</span>
-              <h3>Pages x Color rate x Copies</h3>
+              <h3>Pages × Color rate × Copies</h3>
               <p>
                 Estimate color jobs using the same formula while keeping the rate explicit and
                 deployment-specific.
@@ -248,18 +264,26 @@ export function HomePage() {
         <Reveal>
           <div className="glass-card cta-banner">
             <div>
-              <span className="eyebrow">Ready to try the flow?</span>
-              <h2>Turn a simple WhatsApp message into a full print-ready request.</h2>
+              <span className="eyebrow">Start your print request</span>
+              <h2>Send a document. Pay online. Pick up your prints.</h2>
               <p>
-                Open WhatsApp, send the document, choose the print settings, and move through payment
-                in a workflow that feels clear, fast, and product-ready.
+                Order via WhatsApp or email your document to <strong>autoprintingg@gmail.com</strong>.
+                Both channels are fully automated — no counter, no phone call, no app download needed.
               </p>
             </div>
             <div className="cta-actions">
               <Button external href={whatsappUrl} size="lg">
-                Start Printing on WhatsApp
+                Start on WhatsApp
               </Button>
-              <Button size="lg" to="/contact" variant="secondary">
+              <Button
+                size="lg"
+                href="mailto:autoprintingg@gmail.com?subject=Print%20Request&body=Hi%2C%20I%20would%20like%20to%20print%20a%20document.%20Please%20find%20the%20attachment."
+                variant="secondary"
+              >
+                <Mail size={16} />
+                Email a Document
+              </Button>
+              <Button size="lg" to="/contact" variant="ghost">
                 Contact the team
               </Button>
             </div>

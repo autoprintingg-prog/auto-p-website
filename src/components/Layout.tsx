@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { FloatingWhatsApp } from './FloatingWhatsApp'
+import { FloatingButtons } from './FloatingButtons'
 import { Footer } from './Footer'
 import { Navbar } from './Navbar'
 
@@ -11,7 +11,7 @@ export function Layout({ children }: { children: ReactNode }) {
       <Navbar />
       <main className="site-main">{children}</main>
       <Footer />
-      <FloatingWhatsApp />
+      <FloatingButtons />
     </div>
   )
 }

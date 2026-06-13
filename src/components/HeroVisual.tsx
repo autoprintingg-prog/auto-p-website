@@ -36,7 +36,7 @@ const flowNodes = [
   },
 ]
 
-const statusItems = ['PDF · DOCX · PPTX · JPG · PNG', 'No app download needed', 'Workflow-first design']
+const statusItems = ['WhatsApp · Email · Dual Channel', 'PDF · DOCX · PPTX · JPG · PNG', 'No app download needed']
 
 export function HeroVisual() {
   return (
@@ -63,10 +63,10 @@ export function HeroVisual() {
         >
           <span className="hero-core-badge">
             <Sparkles size={15} />
-            Print automation
+            WhatsApp + Email
           </span>
           <h3>AutoPrint Engine</h3>
-          <p>From document upload to print-ready queueing in one guided path.</p>
+          <p>From document upload to print-ready queueing — via WhatsApp or Email.</p>
           <div style={{ marginTop: '14px', display: 'flex', alignItems: 'center', gap: '8px' }}>
             <motion.div
               animate={{ opacity: [0.5, 1, 0.5] }}

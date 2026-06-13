@@ -37,11 +37,13 @@ export function Footer() {
           </div>
 
           <div className="footer-links footer-links-block">
-            <span className="footer-label">Entry Points</span>
+            <span className="footer-label">Order via</span>
             <a href={whatsappUrl} rel="noopener noreferrer" target="_blank">
-              Open WhatsApp
+              💬 WhatsApp
             </a>
-            <a href={emailComposeUrl}>autoprintingg@gmail.com</a>
+            <a href="mailto:autoprintingg@gmail.com?subject=Print%20Request&body=Hi%2C%20I%20would%20like%20to%20print%20a%20document.%20Please%20find%20the%20attachment.">
+              📧 autoprintingg@gmail.com
+            </a>
             <a href="tel:+918767535697">+91 87675 35697</a>
             <a href="tel:+918010076459">+91 80100 76459</a>
           </div>
