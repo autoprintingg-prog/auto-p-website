@@ -167,7 +167,6 @@ export const defaultSiteContent: SiteContent = {
   navItems: [
     { label: 'Home', path: '/' },
     { label: 'How It Works', path: '/how-it-works' },
-    { label: 'Pricing', path: '/pricing' },
     { label: 'About', path: '/about' },
     { label: 'Contact', path: '/contact' },
   ],

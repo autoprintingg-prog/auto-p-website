@@ -38,9 +38,6 @@ export function HowItWorksPage() {
             <Button external href={whatsappUrl} size="lg">
               Start on WhatsApp
             </Button>
-            <Button size="lg" to="/pricing" variant="ghost">
-              View pricing logic
-            </Button>
           </div>
         </Reveal>
       </section>

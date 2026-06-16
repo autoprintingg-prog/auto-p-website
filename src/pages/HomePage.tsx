@@ -1,5 +1,4 @@
 import {
-  ArrowRight,
   CheckCircle2,
   CreditCard,
   Mail,
@@ -212,53 +211,6 @@ export function HomePage() {
         </div>
       </section>
 
-      <section className="section section-tinted">
-        <Reveal>
-          <SectionHeading
-            eyebrow="Pricing Preview"
-            title="Transparent formulas instead of invented rates"
-            description="AutoPrint is designed to work with operator-configured print charges, so this site explains the billing logic without publishing numbers that may not match the deployment."
-          />
-        </Reveal>
-
-        <div className="pricing-preview-grid">
-          <Reveal>
-            <Card className="pricing-card">
-              <span className="plan-label">B&W Printing</span>
-              <h3>Pages × B&W rate × Copies</h3>
-              <p>
-                Use the calculator on the pricing page with the black and white rate configured by the
-                connected print desk.
-              </p>
-            </Card>
-          </Reveal>
-
-          <Reveal delay={0.08}>
-            <Card className="pricing-card">
-              <span className="plan-label">Color Printing</span>
-              <h3>Pages × Color rate × Copies</h3>
-              <p>
-                Estimate color jobs using the same formula while keeping the rate explicit and
-                deployment-specific.
-              </p>
-            </Card>
-          </Reveal>
-
-          <Reveal delay={0.16}>
-            <Card className="pricing-card pricing-card-highlight">
-              <span className="plan-label">Why This Matters</span>
-              <h3>Clear pricing logic for real deployments</h3>
-              <p>
-                The website stays honest: it explains how totals are produced, while the live system
-                uses the actual rates maintained by the print center.
-              </p>
-              <Button className="inline-button" to="/pricing" variant="ghost">
-                Explore pricing <ArrowRight size={16} />
-              </Button>
-            </Card>
-          </Reveal>
-        </div>
-      </section>
 
       <section className="section">
         <Reveal>
