@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { useSiteContent } from '../hooks/useSiteContent'
 
 export function Footer() {
-  const { emailComposeUrl, footerDescription, footerEyebrow, navItems, siteName, whatsappUrl } =
+  const { footerDescription, footerEyebrow, navItems, siteName, whatsappUrl } =
     useSiteContent()
 
   return (

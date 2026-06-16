@@ -36,7 +36,7 @@ const initialState: ContactFormState = {
 }
 
 export function ContactPage() {
-  const { contactCards, contactIntro, emailComposeUrl, whatsappUrl } = useSiteContent()
+  const { contactCards, contactIntro, whatsappUrl } = useSiteContent()
   const [form, setForm] = useState(initialState)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [notice, setNotice] = useState(
